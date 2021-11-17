@@ -1,4 +1,4 @@
-#10 hands-on exercises related to Cycles
+                                    #10 hands-on exercises related to Cycles
 #¤1
 #p=0
 
@@ -146,78 +146,141 @@
 #print("pravelnoe cislo",a1)
 #print("kolicestvo popitok",b)
 
-#Testing knowledge in mathematics
-from random import*
-from math import*
-from keyboard import*
-print("Teadmiste kontroll")
-T=("Tase (1, 2, 3) ")
-while T not in [1,2,3]:
-    try:
-        T=int(input("Tase (1, 2, 3) "))
-    except ValueError:
-        print("Ainult 1,2 või 3")
-    else:
-        print("No.Ainult 1,2 või 3")
-if T==1:
-    min=0
-    max=15
-    tehed=["+","-"]
-elif T==2:
-    min=0
-    max=15
-    tehed=["+","-","*",]
-elif T==3:
-    min=0
-    max=20
-    tehed=["+","-","*","//",]
-kokku=0
-p=0
 
-while True:
-        V=""
-        d=input("kas jatkama E-break or S-continue: ")
-        if d=='E':
-            break
-        elif d=='S':
-            kokku+=1
-            a=randint(min,max)
-            b=randint(min,max)
-            tehe=choice(tehed)# Robotaet tolko s random
 
-            if tehe=="//" :
-                while b==0:
-                    try:
-                        b=randint(min,max)
-                    except:
-                        ValueError   
-            print(f"{a}{tehe}{b}=",end=" ")
-            A=round(eval(str(a)+tehe+str(b)),2)
-            print(A)
-            while type(V)!=int:
-                try:
-                    V=int(input("="))
-                except:
-                    ValueError
-            if V==A:
-               print("Õige vastlus!")
-               p+=1
-            else:
-                print("Motli veel!")
-print("Kokku ülesndeid: ",kokku)
-print("Õigev vastused:",p)
-K=(p/kokku)*100
-if K<60:
-    print("Hinne 2")
-elif 60<=K<75:
-    print("Hinne 3")
-elif 75<=K<90:
-    print("Hinne 4")
-elif 90<=K:
-    print("Hinne 5")
+                                    #Testing knowledge in mathematics
+
+
+#from random import*
+#from math import*
+#from keyboard import*
+#print("Teadmiste kontroll")
+#T=("Tase (1, 2, 3) ")
+#while T not in [1,2,3]:
+  #  try:
+       # T=int(input("Tase (1, 2, 3) "))
+  #  except ValueError:
+       # print("Ainult 1,2 või 3")
+    #else:
+        #print("No.Ainult 1,2 või 3")
+#if T==1:
+    #min=0
+    #max=15
+    #tehed=["+","-"]
+#elif T==2:
+    #min=0
+    #max=15
+    #tehed=["+","-","*",]
+#elif T==3:
+   # min=0
+   # max=20
+    #tehed=["+","-","*","//",]
+#kokku=0
+#p=0
+
+#while True:
+   #     V=""
+   #     d=input("kas jatkama E-break or S-continue: ")
+      #  if d=='E':
+       #     break
+     #   elif d=='S':
+          #  kokku+=1
+          #  a=randint(min,max)
+          #  b=randint(min,max)
+          #  tehe=choice(tehed)# Robotaet tolko s random
+
+          #  if tehe=="//" :
+              #  while b==0:
+               #     try:
+               #         b=randint(min,max)
+                #    except:
+                    #    ValueError   
+            #print(f"{a}{tehe}{b}=",end=" ")
+            #A=round(eval(str(a)+tehe+str(b)),2)
+            #print(A)
+            #while type(V)!=int:
+                #try:
+                    #V=int(input("="))
+                #except:
+                    #ValueError
+            #if V==A:
+              #print("Õige vastlus!")
+              # p+=1
+            #else:
+               # print("Motli veel!")
+#print("Kokku ülesndeid: ",kokku)
+#print("Õigev vastused:",p)
+#K=(p/kokku)*100
+#if K<60:
+   # print("Hinne 2")
+#elif 60<=K<75:
+    #print("Hinne 3")
+#elif 75<=K<90:
+    #print("Hinne 4")
+#elif 90<=K:
+  #  print("Hinne 5")
 
 
                     
 
+                                            #VigadeOtsing
 
 
+
+print("*** ИГРЫ С ЧИСЛАМИ/Mäng ***")
+print()
+#'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+a=0
+while type(a)!=float:
+    try:
+        a = abs(int(input("Введите целое число => ")))
+        break
+    except ValueError:
+         print("Это не целое число")
+#'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+if a==0:
+    print("Нет смысла ничего делать с нулём")
+else:
+#'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+    print("Определяем, сколько в числе чётных и сколько нечётных цифр")
+    print()
+    c=b=a
+    paaris=0
+    paaritu= 0
+    while b > 0:
+        if b % 2==0:
+            paaris =+ 1
+            b = b // 10
+        else:
+            paaritu =+ 1
+            b = b // 10
+    
+    print("Чётных цифр:",paaris)
+    print("Нечётных цифр:",paaritu)
+    print()
+#''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+    print("*Переворачиваем* введённое число")
+    print()
+    b=0
+    while a > 0:
+        number = a % 10
+        a = a // 10
+        b = b * 10
+        b =+ number
+    print("*Перевёрнутое* число", b)
+    print()
+#''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+    print("Проверяем гипотезу Сиракуз")
+    print()
+    if c % 2==0:
+        print("с - чётное число. Делим на 2.")
+    else:
+        print("с - нечётное число. Умножаем на 3, прибавляем 1 и делим на 2.")
+    while c != 1:
+            if c % 2 == 0:
+                    c == c / 2
+            else:
+                    c == (3*c + 1) / 2
+            print(c, end=" ")
+    print()
+    print("Гипотеза верна")
