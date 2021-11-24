@@ -233,7 +233,7 @@ print()
 a=""
 while type(a)!=int:
     try:
-        a = abs(int(input("Введите целое число => ")))
+        a = abs(int(input("Введите целое число => "))) #abs отрицательное в положительное
         break
     except ValueError:
          print("Это не целое число")
@@ -248,11 +248,11 @@ else:
     paaris=0
     paaritu=0
     while b > 0:
-        if b % 2==0:
+        if b % 2==0:#остаток от деления b=14/2 b=7... 
             paaris += 1
         else:
             paaritu += 1
-        b = b // 10
+        b = b // 10#	целочисленное деление b=143 b=14
     
     print("Чётных цифр:",paaris)
     print("Нечётных цифр:",paaritu)
@@ -262,7 +262,7 @@ else:
     print()
     b=0
     while a > 0:
-        number = a % 10
+        number = a % 10 #остаток от деления b=143 b=14,3 
         a = a // 10
         b = b * 10
         b = b + number
@@ -275,7 +275,7 @@ else:
         print(c," - чётное число. Делим на 2.")
     else:
         print(c," - нечётное число. Умножаем на 3, прибавляем 1 и делим на 2.")
-    while c != 1:
+    while c != 1: # c=1!=1 False) (c=2!=1 True
         if c % 2 == 0:
             c = c / 2
         else:
